@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/mediaQuery.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>Gestão - Default</title>
+  </head>
+  <body id="body_tables">
+    <main id="gestor_default_main">
+      <header class="topo-index" id="header_homeGestao">
+        <img src="img/logo-senai-branco.png" alt="" />
+      </header>
+      <div class="container">
+        <div class="row row--top-40">
+          <div class="col-md-12">
+            <h2 class="row__title">Gerenciamento de <b>GESTORES</b></h2>
+          </div>
+        </div>
+        <div class="row row--top-20">
+          <div class="col-md-12">
+            <div class="table-container">
+              <table class="table">
+                <thead class="table__thead">
+                  <tr>
+                    <th class="table__th"></th>
+                    <th class="table__th">Nome</th>
+                    <th class="table__th">Email</th>
+                  </tr>
+                </thead>
+                <tbody class="table__tbody">
+                  <tr class="table-row table-row--gestor table">
+                    <td class="table-row__td">
+                      <div class="table-row__img"></div>
+                      <div class="table-row__info">
+                        <p class="table-row__id">1</p>
+                      </div>
+                    </td>
+                    <td data-column="Nome" class="table-row__td">
+                      <div class="">
+                        <p class="table-row__p">Bruno Jonas</p>
+                      </div>
+                    </td>
+                    <td data-column="Email" class="table-row__td">
+                      <div class="">
+                        <p class="table-row__p">jonas2@gmail.com</p>
+                      </div>
+                    </td>
+                    <td class="table-row__td">
+                      <img
+                        class="table_delete"
+                        src="img/svg/Delete.svg"
+                        title="Excluir aluno do sistema"
+                        onclick="document.getElementById('id02').style.display='block'"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="table-row table-row--gestor table">
+                    <td class="table-row__td">
+                      <div class="table-row__img"></div>
+                      <div class="table-row__info">
+                        <p class="table-row__id">2</p>
+                      </div>
+                    </td>
+                    <td data-column="Nome" class="table-row__td">
+                      <div class="">
+                        <p class="table-row__p">Eloa Fernandes</p>
+                      </div>
+                    </td>
+                    <td data-column="Email" class="table-row__td">
+                      <div class="">
+                        <p class="table-row__p">eloa@gmail.com</p>
+                      </div>
+                    </td>
+                    <td class="table-row__td">
+                      <img
+                        class="table_delete"
+                        src="img/svg/Delete.svg"
+                        title="Excluir aluno do sistema"
+                      />
+                    </td>
+                  </tr>
+                  <tr class="table-row table-row--gestor table">
+                    <td class="table-row__td">
+                      <div class="table-row__img"></div>
+                      <div class="table-row__info">
+                        <p class="table-row__id">3</p>
+                      </div>
+                    </td>
+                    <td data-column="Nome" class="table-row__td">
+                      <div class="">
+                        <p class="table-row__p">Erika Santos</p>
+                      </div>
+                    </td>
+                    <td data-column="Email" class="table-row__td">
+                      <div class="">
+                        <p class="table-row__p">erika452@gmail.com</p>
+                      </div>
+                    </td>
+                    <td class="table-row__td">
+                      <img
+                        class="table_delete"
+                        src="img/svg/Delete.svg"
+                        
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bnts">
+        <input
+          onclick="document.getElementById('id01').style.display='block'"
+          type="button"
+          value="Cadastrar Gestor"
+        />
+        <input
+          type="button"
+          value="Atualizar a Tabela"
+          onclick=" location.reload()"
+        />
+      </div>
+
+      <div class="w3-container">
+        <div id="id02" class="w3-modal">
+          <div class="w3-modal-content w3-animate-top">
+            <span
+              onclick="document.getElementById('id02').style.display='none'"
+              class="w3-button w3-display-topright"
+              >&times;</span
+            >
+            <div class="form_modal">
+              <p class="p_modal">
+                Você tem certeza que deseja excluir este Gestor?
+              </p>
+              <form method="post">
+                <input
+                  type="hidden"
+                  name="idGestorExcluir"
+                  id="idGestorExcluir"
+                />
+                  <div class="input_modal">
+                    <input class="senhaGestorDefault" placeholder="Senha Gestor Default" type="password" name="senhaGestorDefault" required />
+                  </div>
+                 
+                 <div class="bnts">
+                  <button  class="btn" type="submit" name="confirmarExclusao">Excluir</button>
+                 </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-container">
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content w3-animate-top">
+            <span
+              onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-display-topright"
+              >&times;</span
+            >
+            <div class="form_modal">
+              <div class="container">
+                <div class="header">
+                  <div>
+                    <div class="logo">
+                      <img src="img/svg/Senai _logoSVG.svg" />
+                    </div>
+                    <div class="icone">
+                      <img src="img/svg/icone_chapeu_academico.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <form method="post">
+                  <input name="idProfessor" type="text" value="1" hidden />
+                  <div class="input_modal">
+                    <input
+                      type="text"
+                      placeholder="Nome Completo"
+                      name="NomeCompleto"
+                      required
+                      id="nomeCompleto"
+                    />
+                  </div>
+                  <p
+                    class="p_modal"
+                    id="verificacaoNomeCompleto"
+                    style="display: none"
+                  >
+                    Digite um nome completo
+                  </p>
+                  <div class="input_modal">
+                    <input
+                      type="text"
+                      placeholder="CPF"
+                      name="CPF"
+                      oninput="mascara(this)"
+                      maxlength="11"
+                      id="cpf"
+                      required
+                    />
+                  </div>
+                  <p id="verificacaoCPF_p" style="display: none">
+                    Digite um CPF válido
+                  </p>
+                  <div class="input_modal">
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      name="email"
+                      id="email"
+                      required
+                    />
+                  </div>
+                  <div class="input_modal">
+                    <input
+                      id="senhaCadastro"
+                      placeholder="Senha"
+                      type="password"
+                      name="senha"
+                      id="senha"
+                      required
+                    />
+                  </div>
+                  <div class="input_modal">
+                    <input
+                      id="confirmarSenhaCadastro"
+                      placeholder="Confirmar Senha"
+                      type="password"
+                      name="senha"
+                      id="senha"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <p
+                      class="p_modal"
+                      id="comparacaoSenhas"
+                      style="display: none"
+                    >
+                      As senhas não conferem
+                    </p>
+                  </div>
+                  <div class="bnts">
+                    <button
+                      type="submit"
+                      name="cadastrarGestor"
+                      id="submitCadastrarGestor"
+                    >
+                      Cadastrar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="js/reveal.js"></script>
+  <script src="js/mascaraCpf.js"></script>
+  <script>
+    
+
+    const botaoCriarConta = document.getElementById("submitCadastrarGestor");
+
+    const inputSenha = document.getElementById("senhaCadastro");
+    const inputConfirmarSenha = document.getElementById(
+      "confirmarSenhaCadastro"
+    );
+
+    const comparacaoSenhasP = document.getElementById("comparacaoSenhas");
+    const verificacaoNomeCompletoP = document.getElementById(
+      "verificacaoNomeCompleto"
+    );
+
+    const inputNomeCompleto = document.getElementById("nomeCompleto");
+
+    inputSenha.addEventListener("input", validarCadastro);
+    inputConfirmarSenha.addEventListener("input", validarCadastro);
+    inputNomeCompleto.addEventListener("input", validarCadastro);
+
+    //verifca se as senhas conferem e se nao esta digitando apenas um nome
+    function validarCadastro() {
+      const palavrasinputNomeCompleto = inputNomeCompleto.value
+        .split(/\s+/)
+        .filter(Boolean).length;
+
+      comparacaoSenhasP.style.display =
+        inputSenha.value === inputConfirmarSenha.value ? "none" : "block";
+
+      verificacaoNomeCompletoP.style.display =
+        palavrasinputNomeCompleto > 1 ? "none" : "block";
+
+      const inputCPF = document.getElementById("cpf");
+      const verificacaoCPF_p = document.getElementById("verificacaoCPF_p");
+
+      inputCPF.addEventListener("input", function () {
+        var comprimentoCPF = inputCPF.value.length;
+        verificacaoCPF_p.style.display = comprimentoCPF < 11 ? "block" : "none";
+      });
+      if (
+        inputSenha.value === inputConfirmarSenha.value &&
+        palavrasinputNomeCompleto > 1 &&
+        comprimentoCPF == 11
+      ) {
+        botaoCriarConta.removeAttribute("disabled");
+      } else {
+        botaoCriarConta.setAttribute("disabled", "true");
+      }
+    }
+    ///////////////////////////
+  </script>
+</html>

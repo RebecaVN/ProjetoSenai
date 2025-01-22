@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Máquinas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="body-cadastrarMaquina">
+    <header class="topo-index">
+        <img width="140" src="img/logo-senai-branco.png" alt="" />
+
+      </header>
+
+    <main>
+        <div class="form-cadastrarMaq">
+            <form class="cadMaq" action="">
+                <i class="fa fa-cogs" style="font-size:70px;color:rgb(255, 255, 255)"></i>
+                <p class="categoria">Categoria da máquina:</p>
+
+                <div class="teste">
+
+                    <div class="box">
+                        <select>
+                            <option>Torno</option>
+                            <option>Fresadora</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="addCategoria">
+                    <i class="fa fa-plus-circle" style="font-size:20px"></i> 
+                    <a href="cadastrarTipoMaquina.html"> Adicionar nova categoria.</a>
+                </div>
+                <div class="inputs-cadastrar-maquina">
+                    <input type="text" placeholder="ID">
+                    <input type="text" placeholder="Fabricante">
+                    <input type="text" placeholder="Modelo">
+                    
+                    
+                       
+                </div>
+                <section id="section_input_img">
+                    <div id="div_img_input">
+                        <div class="form-upload">
+                            <label class="input-personalizado">
+                                <span class="botao-selecionar">Selecione uma imagem</span>
+                                <img class="imagem" />
+                                <input type="file" class="input-file" accept="image/*">
+                            </label>
+                          
+                        </div>
+                    </div>
+                </section>
+                <div class="opcional">
+                    <p>(Opcional)</p>
+                </div>
+
+                <div class="cadastrar-maquina">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+
+
+    </main>
+
+    <script>
+        const $ = document.querySelector.bind(document);
+
+        const previewImg = $('.imagem');
+        const fileChooser = $('.input-file');
+    
+        fileChooser.onchange = e => {
+            const fileToUpload = e.target.files.item(0);
+            const reader = new FileReader();
+            reader.onload = e => previewImg.src = e.target.result;
+            reader.readAsDataURL(fileToUpload);
+        };
+    </script>
+</body>
+
+</html>

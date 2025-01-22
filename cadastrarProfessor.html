@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar Professor</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaQuery.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body id="body_cadastrarProfessor">
+    <header class="topo-index">
+      <img width="140" src="img/logo-senai-branco.png" alt="" />
+
+    </header>
+
+    <main id="main_cadastrarProfessor">
+      <div class="w3-modal-content w3-animate-top">
+        <div class="form_modal">
+          <div class="container">
+            <div class="header">
+              <div>
+                <div class="icone">
+                  <img src="img/svg/School Director-branco.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <form method="post">
+              <input name="idProfessor" type="text" value="1" hidden />
+              <div class="input_modal">
+                <input
+                  type="text"
+                  placeholder="Nome Completo"
+                  name="NomeCompleto"
+                  required
+                  id="nomeCompleto"
+                />
+              </div>
+              <p
+                class="p_modal"
+                id="verificacaoNomeCompleto"
+                style="display: none"
+              >
+                Digite um nome completo
+              </p>
+              <div class="input_modal">
+                <input
+                  type="text"
+                  placeholder="CPF"
+                  name="CPF"
+                  oninput="mascara(this)"
+                  maxlength="11"
+                  id="cpf"
+                  required
+                />
+              </div>
+              <p id="verificacaoCPF_p" style="display: none">
+                Digite um CPF válido
+              </p>
+              <div class="input_modal">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+
+              <div>
+                <p class="p_modal" id="comparacaoSenhas" style="display: none">
+                  As senhas não conferem
+                </p>
+              </div>
+              <div class="bnts">
+                <button
+                  type="submit"
+                  name="cadastrarGestor"
+                  id="submitCadastrar"
+                >
+                  Cadastrar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="js/mascaraCpf.js"></script>
+  <script>
+    const botaoCriarConta = document.getElementById("submitCadastrar");
+    const verificacaoNomeCompletoP = document.getElementById(
+      "verificacaoNomeCompleto"
+    );
+
+    const inputNomeCompleto = document.getElementById("nomeCompleto");
+
+    //verifca se as senhas conferem e se nao esta digitando apenas um nome
+    function validarCadastro() {
+      const palavrasinputNomeCompleto = inputNomeCompleto.value
+        .split(/\s+/)
+        .filter(Boolean).length;
+
+
+
+      verificacaoNomeCompletoP.style.display =
+        palavrasinputNomeCompleto > 1 ? "none" : "block";
+
+      const inputCPF = document.getElementById("cpf");
+      const verificacaoCPF_p = document.getElementById("verificacaoCPF_p");
+
+      inputCPF.addEventListener("input", function () {
+        var comprimentoCPF = inputCPF.value.length;
+        verificacaoCPF_p.style.display = comprimentoCPF < 11 ? "block" : "none";
+      });
+      if (palavrasinputNomeCompleto > 1 && comprimentoCPF == 14) {
+        botaoCriarConta.removeAttribute("disabled");
+      } else {
+        botaoCriarConta.setAttribute("disabled", "true");
+      }
+    }
+    ///////////////////////////
+  </script>
+</html>

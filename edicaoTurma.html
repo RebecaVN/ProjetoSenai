@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Configuraçoes Turma</title>
+  </head>
+  <body id="body_perfil">
+    <header class="topo-index">
+      <img width="140" src="img/logo-senai-branco.png" alt="" />
+
+    </header>
+    <main id="main_formPerfil">
+      <div class="container_form">
+        <section>
+          <img src="img/svg/School.svg" />
+          <div  class="edit_Icon">
+            <img  onclick="liberarEdicaoPerfil()" src="img/svg/Edit.svg" id="imgEditIcon" />
+         </div>
+        </section>
+        <form id="form_perfil">
+          <div class="input">
+            <input
+              required
+              class="turma"
+              value="M3P"
+              placeholder="Turma"
+              readonly
+            />
+          </div>
+          <div class="input ">
+            <input readonly  placeholder="Email" class="codigo" value="ADV67SCas"/>
+          </div>
+          <div class="checkboxes" id="checkboxesEditarTurma">
+            <div class="titulo">
+              <p>Máquinas que serão disponibilizadas:</p>
+            </div>
+            <div class="container-checkboxes">
+              <label class="cyberpunk-checkbox-label">
+                <input type="checkbox" class="cyberpunk-checkbox" checked disabled/>
+                Torno</label
+              >
+              <label class="cyberpunk-checkbox-label">
+                <input type="checkbox" class="cyberpunk-checkbox" checked disabled />
+                <p>Fresadora</p></label
+              >
+            </div>
+          </div>
+         <div class="bnts">
+          <div class="inputs">
+          <input type="submit" value="Salvar">
+          <input type="button" value="Cancelar" id="botaoCancelar" onclick=" cancelarEdicaoPerfil()" style="display: none;">
+         </div>
+         </div>
+        </form>
+      </div>
+    </main>
+  </body>
+  <script src="js/reveal.js"></script>
+  <script src="js/script.js"></script>
+</html>

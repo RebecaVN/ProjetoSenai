@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar Categoria de Máquina</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+
+  <body id="body_cadastrarCategoriaMaquina">
+    <header class="topo-index">
+      <img width="140" src="img/logo-senai-branco.png" alt="" />
+
+    </header>
+
+    <main id="main_cadastrarCategoriaMaquina">
+      <div class="w3-modal-content w3-animate-top">
+        <div class="form_modal">
+          <div class="container">
+            <div class="header">
+              <div>
+                <div class="icone">
+                  <i
+                    class="fa fa-cogs fa-5x"
+                    style="font-size: 70px; color: rgb(255, 255, 255)"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <form method="post">
+              <div class="input_modal">
+                <input
+                  type="text"
+                  placeholder="Nome da Categoria"
+                  name="categoria"
+                  required
+                />
+              </div>
+
+              <section class="checkboxes_section">
+                <div class="checkboxes">
+                  <div class="titulo">
+                    <p>Atributos</p>
+                    <i
+                      class="fa fa-info-circle"
+                      title="Esses itens irão fazer parte desta categoria de máquina. E poderão ser verificadas no momento do checklist."
+                    ></i>
+                  </div>
+                  <div class="container-checkboxes">
+                    <label class="cyberpunk-checkbox-label">
+                      <input type="checkbox" class="cyberpunk-checkbox" />
+                      Velocidade</label
+                    >
+                    <label class="cyberpunk-checkbox-label">
+                      <input type="checkbox" class="cyberpunk-checkbox" />
+                      <span>Pressão</span>
+                    </label>
+                    <div  class="add">
+                      <img src="img/svg/icons8-adicionar-24 3.svg" />
+                      <span>Add Atributo</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkboxes">
+                  <div class="titulo">
+                    <p>Peças</p>
+                  </div>
+                  <div class="container-checkboxes">
+                    <label class="cyberpunk-checkbox-label">
+                      <input type="checkbox" class="cyberpunk-checkbox" />
+                      Pinos</label
+                    >
+                    <label class="cyberpunk-checkbox-label">
+                      <input type="checkbox" class="cyberpunk-checkbox" />
+                      Polias
+                    </label>
+                    <div  class="add">
+                      <img src="img/svg/icons8-adicionar-24 3.svg" />
+                      <span>Add Peça</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkboxes">
+                  <div class="titulo">
+                    <p>Itens Checklist</p>
+                    <i
+                      class="fa fa-info-circle"
+                      title="Esses itens irão fazer parte desta categoria de máquina. E poderão ser verificadas no momento do checklist."
+                    ></i>
+                  </div>
+                  <div class="container-checkboxes">
+                    <label class="cyberpunk-checkbox-label">
+                      <input type="checkbox" class="cyberpunk-checkbox" />
+                      Vazamento</label
+                    >
+                    <label class="cyberpunk-checkbox-label">
+                      <input type="checkbox" class="cyberpunk-checkbox" />
+                      Peças Soltas
+                    </label>
+                    <div
+                      onclick="document.getElementById('id01').style.display='block'"
+                      class="add"
+                    >
+                      <img src="img/svg/icons8-adicionar-24 3.svg" />
+                      <span>Add Item</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section id="section_input_img">
+                <div id="div_img_input">
+                  <div class="form-upload">
+                    <label class="input-personalizado">
+                      <span class="botao-selecionar">Selecione uma imagem</span>
+                      <img class="imagem" />
+                      <input
+                        type="file"
+                        class="input-file"
+                        accept="image/*"
+                        required
+                      />
+                    </label>
+                  </div>
+                </div>
+              </section>
+              <div class="bnts">
+                <button type="submit" id="submitCadastrar">Cadastrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-container">
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content w3-animate-top">
+            <span
+              onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-display-topright"
+              >&times;</span
+            >
+            <div class="form_modal">
+              <p class="p_modal">
+                Você tem certeza que deseja excluir este Gestor?
+              </p>
+              <form method="post">
+                <input
+                  type="hidden"
+                  name="idGestorExcluir"
+                  id="idGestorExcluir"
+                />
+                <div class="input_modal">
+                  <input
+                    class="senhaGestorDefault"
+                    placeholder="Senha Gestor Default"
+                    type="password"
+                    name="senhaGestorDefault"
+                    required
+                  />
+                </div>
+
+                <div class="bnts">
+                  <button class="btn" type="submit" name="confirmarExclusao">
+                    Excluir
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="js/reveal.js"></script>
+  <script>
+    const $ = document.querySelector.bind(document);
+
+    const previewImg = $(".imagem");
+    const fileChooser = $(".input-file");
+
+    fileChooser.onchange = (e) => {
+      const fileToUpload = e.target.files.item(0);
+      const reader = new FileReader();
+      reader.onload = (e) => (previewImg.src = e.target.result);
+      reader.readAsDataURL(fileToUpload);
+    };
+  </script>
+</html>

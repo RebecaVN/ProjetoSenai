@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicial - Aluno</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/mediaQuery.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body id="body-inicialAluno">
+  <header class="topo-inicial">
+    <img width="140" class="logo-inicial" src="img/logo-senai-branco.png" alt="" />
+
+    <div class="icons">
+      <a href=""><i class="fa fa-user-circle" style="color: rgb(255, 255, 255); cursor: pointer"></i></a>
+      <input  type="checkbox" role="button" aria-label="Display the menu" id="menuh" class="menu" />
+    
+    </div>
+  
+    
+  </header>
+  <section class="local-menu">
+
+
+  <div id="menu">
+    <ul>
+      <div class="icone-texto">
+        <a href="#"> <li><i class="fa fa-list-alt" style="font-size:24px;color:#ffffff;"></i>Acessar Uma Nova Turma</li></a>
+      </div>
+
+      <div class="icone-texto">
+        <a target="_blank" href="https://drive.google.com/drive/folders/13PZ04RBnXA7RsN4lV2t9E1EVdSJNtgpO"><li><i class="fa fa-book" style="font-size:24px;color:rgb(255, 255, 255);"></i> Manuais</li></a>
+    </div>
+    <div class="icone-texto">
+      <a href="#"><li><i class="fa fa-users" style="font-size:24px;color:rgb(255, 255, 255);"></i>Pessoas</li></a>
+    </div>
+    </ul>
+
+  </div>
+</section>
+  <main class="corpo-inicial">
+
+    <div class="bem-vindo">
+      <h2>Bem vindo(a), Rebeca!</h2>
+      <a href="entrarTurmaNova.html"><i class="fa fa-plus"></i> Acessar uma nova Turma</a>
+    </div>
+    <div class="pesquisa">
+      <input style="font-size: 16px" placeholder="Pesquise por uma turma" class="pesquisar" type="text" />
+    </div>
+
+    <div class="aviso" style="display: none">
+      <h3>Ops!</h3>
+      <p>
+        Você ainda não está cadastrado em nenhuma turma.
+        <a href="entrarTurmaNova.html">Clique aqui</a> para entrar em uma, ou
+        acesse o menu.
+      </p>
+    </div>
+    <div class="turmas">
+      <div class="card">
+        <a href="cadastrarMaquina.html">
+          <div class="infos">
+            <p id="first_p">Cadastrar Máquina</p>
+            <p id="second_p">Cadastrar máquinas....</p>
+          </div>
+          <div class="rodape">
+            <i>
+              <img src="img/svg/seta.svg" alt="" />
+            </i>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="tabelaChecklits.html">
+          <div class="infos">
+            <p id="first_p">Checklist</p>
+            <p id="second_p">Checklist de Segurança...</p>
+          </div>
+          <div class="rodape">
+            <i>
+              <img src="img/svg/seta.svg" alt="" />
+            </i>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="tabelaMaquina.html">
+          <div class="infos">
+            <p id="first_p">Máquinas disponíveis</p>
+            <p id="second_p">Máquinas disponíveis...</p>
+          </div>
+          <div class="rodape">
+            <i>
+              <img src="img/svg/seta.svg" alt="" />
+            </i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="js/reveal.js"></script>
+
+
+<script>
+
+  var menuButton = document.getElementById("menuh");
+var menu = document.getElementById("menu");
+
+menuButton.addEventListener("click", function() {
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}); 
+</script>
+
+</html>

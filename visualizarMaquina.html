@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mediaQuery.css">
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="js/graficos.js"></script>
+
+  <title>Visualizar máquinas</title>
+
+  <style>
+
+  </style>
+</head>
+
+<body id="visualizarMaquinas">
+
+  <header class="topo-index">
+    <a href="inicialAluno.html"><img width="140" src="img/logo-senai-branco.png" alt="" /></a>
+  </header>
+
+  <main id="main_visualizarMaquina">
+    <section class="informacoes_maquina">
+
+      <div class="nome_maquina">
+        <h2>Torno Mecanico</h2>
+      </div>
+
+      <div class="container-infoMaq">
+        <div class="img">
+          <img src="img/torno.png" width="300" alt="">
+          <figcaption>Fabricante: Lorem ipsum dolor sit amet</figcaption><br>
+        </div>
+        <div class="subInfo">
+          <div class="id">
+            <h3>ID:0000000</h3>
+          </div>
+
+          <div class="btns">
+            <div class="btn">
+              <a target="_blank" href="https://drive.google.com/drive/folders/13PZ04RBnXA7RsN4lV2t9E1EVdSJNtgpO">Manual</a>
+            </div>
+            <div class="btn">
+              <a href="#checklist">Checklist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="graficos" id="graficos">
+
+
+        <div class="card-grafico">
+          <p>Velocidade</p>
+          <div id="chartdiv"></div>
+        </div>
+        <div class="card-grafico">
+          <p>Velocidade</p>
+          <div id="chartdiv"></div>
+        </div>
+        <div class="card-grafico">
+          <p>Velocidade</p>
+          <div id="chartdiv"></div>
+        </div>
+        <div class="card-grafico">
+          <p>Velocidade</p>
+          <div id="chartdiv"></div>
+        </div>
+        <div class="card-grafico">
+          <p>Velocidade</p>
+          <div id="chartdiv"></div>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+    </section>
+
+
+    <!-- checklist -->
+    <h2 class="tituloCheck">Checklist</h2>
+    <p class="infoCheck">Realize o checklist da sua máquina</p>
+
+    <div class="checklist" id="checklist">
+      <div class="container-check">
+        <div class="testando">
+
+          <label class="material-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Vazamento de óleo
+          </label>
+          <div class="container-check">
+            <label class="material-checkbox">
+              <input disabled type="checkbox">
+              <span id="botao-desabilitado" class="checkmark"></span>
+              Nível do óleo
+            </label>
+          </div>
+        </div>
+
+
+      </div>
+
+
+  </main>
+
+
+</body>
+
+</html>

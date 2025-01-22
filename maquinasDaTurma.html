@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Máquinas de M2M</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/mediaQuery.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+  <header class="topo-inicial">
+    <img width="140" class="logo-inicial" src="img/logo-senai-branco.png" alt="" />
+    <div class="icons">
+      <a href=""><i class="fa fa-user-circle" style="color: rgb(255, 255, 255); cursor: pointer"></i></a>
+      <input  type="checkbox" role="button" aria-label="Display the menu" id="menuh" class="menu" />
+    </div>
+  </header>
+
+  <section class="local-menu">
+
+
+    <div id="menu">
+      <ul>
+        <div class="icone-texto">
+          <a href="/entrarTurmaNova.html"><li><i class="fa fa-list-alt" style="font-size:24px;color:#ffffff;"></i>Acessar Uma Nova Turma</li></a>
+        </div>
+        <div class="icone-texto">
+          <a target="_blank" href="https://drive.google.com/drive/folders/13PZ04RBnXA7RsN4lV2t9E1EVdSJNtgpO"><li><i class="fa fa-book" style="font-size:24px;color:rgb(255, 255, 255);"></i> Manuais</li></a>
+      </div>
+      <div class="icone-texto">
+        <a href="#"><li><i class="fa fa-users" style="font-size:24px;color:rgb(255, 255, 255);"></i>Pessoas</li></a>
+      </div>
+      <div class="icone-texto">
+        <a href="inicialAluno.html"><li><i class="fa fa-home" style="font-size:24px;color:rgb(255, 255, 255);"></i>Home</li></a>
+      </div>
+      </ul>
+  
+    </div>
+  </section>
+
+  <main class="corpo-inicial" id="main_maquinasDaTurmas">
+    <div class="bem-vindo">
+      <h2>Máquinas disponíveis em M2M</h2>
+    </div>
+    <div class="pesquisa">
+      <input style="font-size: 16px" placeholder="Pesquise por uma máquina" class="pesquisar" type="text" />
+    </div>
+
+    <div class="maquinas">
+      <div class="card">
+        <div class="imgBx" style="--clr:#009688;">
+          <img src="img/torno.png" title="torno">
+        </div>
+        <div class="content">
+          <h2>ID: 00000</h2>
+          <p>Torno Max</p>
+          <p>Fabricante: Fazedor de Tornos</p>
+          <div>
+            <a href="visualizarMaquina.html">Acessar</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imgBx" style="--clr:#009688;">
+          <img src="img/torno.png" title="torno">
+        </div>
+        <div class="content">
+          <h2>ID: 00000</h2>
+          <p>Torno Max</p>
+          <p>Fabricante: Fazedor de Tornos</p>
+          <div>
+            <a href="visualizarMaquina.html">Acessar</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imgBx" style="--clr:#009688;">
+          <img src="img/torno.png" title="torno">
+        </div>
+        <div class="content">
+          <h2>ID: 00000</h2>
+          <p>Torno Max</p>
+          <p>Fabricante: Fazedor de Tornos</p>
+          <div>
+            <a href="visualizarMaquina.html">Acessar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+<script>
+
+  var menuButton = document.getElementById("menuh");
+var menu = document.getElementById("menu");
+
+menuButton.addEventListener("click", function() {
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}); 
+</script>
+<script src="js/reveal.js"></script>
+
+</html>
